@@ -23,17 +23,22 @@ public class Languages {
          int balance = 2000;
         String PIN = "\\d{4}";
     while(attempt!=0){
-        System.out.println("\n==========================================================================");
-        System.out.println("Please Enter Your PIN: ");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Please Enter Your PIN: "+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         String pass = scan.nextLine();
         if(attempt > 0 && pin.equals(pass)){
-            System.out.println("Login Successfully. Welcome ");
+            System.out.println("|" +"\t"+"Login Successfully. Welcome "+"\t"+"\t"+"|");
             break;
         }else if(attempt!=0){
             attempt--;
             if (attempt == 0){
-                System.out.println("Pin is incorrect.");
-                System.out.println("All attempts have been used");
+                System.out.println("\n=================================================");
+                System.out.println("|" +"\t"+"Pin is incorrect."+"\t"+"\t"+"\t"+"|");
+                System.out.println("|" +"\t"+"All attempts have been used"+"\t"+"\t"+"|");
+                System.out.println("\n=================================================");
                 System.exit(0);
         }else{
             
@@ -47,21 +52,23 @@ public class Languages {
                System.out.println("Pin must contain 4 characters only");
                break;
             }else{
-             System.out.println("Pin is incorrect. Remaining attempts: " + attempt);
+             System.out.println("|" +"\t"+"Pin is incorrect. Remaining attempts: " + attempt +"\t"+ "|");
         }
             }
         }
     }
         String languageChoice = "English";
-
-        System.out.println("Choose a language:");
-        System.out.println("1. English");
-        System.out.println("2. Tagalog");
-        System.out.println("3. Indonesia");
-        System.out.println("4. Japanese");
-        System.out.println("5. Malaysia");
-        System.out.print("Enter your choice (1 to 5): ");
-
+        System.out.println("=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Choose a language:"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"1. English"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. Tagalog"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. Indonesia"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. Japanese"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. Malaysia"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.print("|" +"\t"+"Enter your choice (1 to 5): "+"\t"+"\t");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("=================================================");
         
             int choices = scanner.nextInt();
 
@@ -81,17 +88,21 @@ public class Languages {
             }
 
             if (languageChoice.equals("English")) {
-                System.out.println("Thank you for Choosing");
+                System.out.println("|" +"\t"+"Thank you for Choosing"+"\t"+"\t"+"\t"+"|");
+                System.out.println("=================================================");
                  
     while (true) {
         clearScreen();
-        System.out.println("\n==========================================================================");
-        System.out.println("Choose your transaction: ");
-        System.out.println("1. Balance Inquiry");
-        System.out.println("2. Withdraw");
-        System.out.println("3. Deposit");
-        System.out.println("4. Change Pin");
-        System.out.println("5. Exit");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Choose your transaction: "+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"1. Balance Inquiry"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. Withdraw"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. Deposit"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. Change Pin"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. Exit"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         int choice = sc.nextInt();
             clearScreen();
 
@@ -160,8 +171,9 @@ public class Languages {
 
                 case 4:
                     // Change Pin Operation Here:
-                    System.out.println("\n==========================================================================");
-                    System.out.print("Enter your current PIN: ");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                    System.out.print("|" +"\t"+"Enter your current PIN: ");
                     String currentpin = sc.next();
 
                     if (currentpin.equals(pin)) {
@@ -185,14 +197,17 @@ public class Languages {
                                         // Change Pin operation successful
                                         pin = newPin;
                                         System.out.println("New Pin Confirmed");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("=================================================");
                                         System.out.println("New Pin: " + pin);
                                     } else if (newPin.equals(pin)) {
                                         System.out.println("New Pin can't be old Pin");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("=================================================");
                                     } else {
                                         System.out.println("The Pin and Confirm Pin doesn't match");
-                                        System.out.println("\n==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                 }
                 }
                         
@@ -234,13 +249,16 @@ public class Languages {
                 System.out.println("Salamata sa pag-pili");
     while (true) {
         clearScreen();
-        System.out.println("\n==========================================================================");
-        System.out.println("Pumili ng inyong transaksyon: ");
-        System.out.println("1. Pag tingin ng Balanse");
-        System.out.println("2. Mag-withdraw");
-        System.out.println("3. Deposito");
-        System.out.println("4. Baguhin ang Pin");
-        System.out.println("5. Mag-Exit");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Pumili ng Transaksyon: "+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"1. Pag tingin ng Balanse"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. Mag-withdraw"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. Deposito"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. Baguhin ang Pin"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. Mag-Exit"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         int choice = sc.nextInt();
             clearScreen();
 
@@ -309,7 +327,8 @@ public class Languages {
 
                 case 4:
                     // Change Pin Operation Here:
-                    System.out.println("\n==========================================================================");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
                     System.out.print("Ilagay ang Inyong kasalukuyang PIN: ");
                     String currentpin = sc.next();
 
@@ -334,14 +353,17 @@ public class Languages {
                                         // Change Pin operation successful
                                         pin = newPin;
                                         System.out.println("bagong pin nakumpirma");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                         System.out.println("Bagong PIN: " + pin);
                                     } else if (newPin.equals(pin)) {
                                         System.out.println("Ang Bagong Pin ay hindi maaaring lumang Pin");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                     } else {
                                         System.out.println("Hindi magkatugma ang Pin at Kumpirmahin ang Pin");
-                                        System.out.println("\n==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                 }
                 }
                         
@@ -380,13 +402,16 @@ public class Languages {
                 System.out.println("terima kasih telah memilih!");
                 while (true) {
         clearScreen();
-        System.out.println("\n==========================================================================");
-        System.out.println("Pilih transaksi Anda: ");
-        System.out.println("1. Informasi saldo");
-        System.out.println("2. Menarik");
-        System.out.println("3. Menyetorkan");
-        System.out.println("4. Ganti PIN");
-        System.out.println("5. KELUAR");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Pilih transaksi Anda: "+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"1. informasi saldo"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. menarik"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. menyetorkan"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. ganti PIN"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. meninggalkan"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         int choice = sc.nextInt();
             clearScreen();
 
@@ -456,7 +481,8 @@ public class Languages {
 
                 case 4:
                     // Change Pin Operation Here:
-                    System.out.println("\n==========================================================================");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
                     System.out.print("Masukkan PIN Anda saat ini: ");
                     String currentpin = sc.next();
 
@@ -481,14 +507,17 @@ public class Languages {
                                         // Change Pin operation successful
                                         pin = newPin;
                                         System.out.println("Pin Baru Dikonfirmasi");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                         System.out.println("Pin Baru: " + pin);
                                     } else if (newPin.equals(pin)) {
                                         System.out.println("Pin baru tidak boleh Pin lama");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                     } else {
                                         System.out.println("Pin dan Pin Konfirmasi tidak cocok");
-                                        System.out.println("\n==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                 }
                 }
                         
@@ -528,13 +557,16 @@ public class Languages {
                 System.out.println("Sentaku shite itadaki arigatōgozaimasu");
                  while (true) {
         clearScreen();
-        System.out.println("\n==========================================================================");
-        System.out.println("Torihiki o sentaku shite kudasai: ");
-        System.out.println("1. Zandaka shōkai");
-        System.out.println("2. Tekkai suru");
-        System.out.println("3. Depojitto");
-        System.out.println("4. Pin no henkō");
-        System.out.println("5. Deguchi");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Torihiki o sentaku shite kudasai: "+"\t"+"|");
+        System.out.println("|" +"\t"+"1. Zandaka shōkai"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. Tekkai suru"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. Depojitto"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. Pin o henkō suru"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. Deguchi"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         int choice = sc.nextInt();
             clearScreen();
 
@@ -604,7 +636,8 @@ public class Languages {
 
                 case 4:
                     // Change Pin Operation Here:
-                    System.out.println("\n==========================================================================");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
                     System.out.print("Genzai no pin o nyūryoku shite kudasai: ");
                     String currentpin = sc.next();
 
@@ -629,14 +662,17 @@ public class Languages {
                                         // Change Pin operation successful
                                         pin = newPin;
                                         System.out.println("Atarashī pin ga kakunin sa remashita");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                         System.out.println("Atarashī pin: " + pin);
                                     } else if (newPin.equals(pin)) {
                                         System.out.println("Atarashī pin o furui pin ni suru koto wa dekimasen");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                     } else {
                                         System.out.println("Pin to pin no kakunin ga itchi shimasen");
-                                        System.out.println("\n==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                 }
                 }
                         
@@ -676,13 +712,16 @@ public class Languages {
                 System.out.println("Terima kasih kerana memilih!");
     while (true) {
         clearScreen();
-        System.out.println("\n==========================================================================");
-        System.out.println("Pilih transaksi anda: ");
-        System.out.println("1. Pertanyaan baki");
-        System.out.println("2. tarik diri");
-        System.out.println("3. simpanan");
-        System.out.println("4. Tukar Pin");
-        System.out.println("5. Keluar");
+        System.out.println("\n=================================================");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"Pilih transaksi anda: "+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"1. pertanyaan baki"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"2. menarik diri"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"3. simpanan"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. Baguhin ang Pin"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. tukar pin"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("\n=================================================");
         int choice = sc.nextInt();
             clearScreen();
 
@@ -752,7 +791,8 @@ public class Languages {
 
                 case 4:
                     // Change Pin Operation Here:
-                    System.out.println("\n==========================================================================");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
                     System.out.print("Masukkan PIN semasa anda: ");
                     String currentpin = sc.next();
 
@@ -777,14 +817,17 @@ public class Languages {
                                         // Change Pin operation successful
                                         pin = newPin;
                                         System.out.println("Pin Baharu Disahka");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                         System.out.println("Pin Baharu: " + pin);
                                     } else if (newPin.equals(pin)) {
                                         System.out.println("Pin baharu tidak boleh menjadi Pin lama");
-                                        System.out.println("==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                                     } else {
                                         System.out.println("Pin dan Sahkan Pin tidak sepadan");
-                                        System.out.println("\n==========================================================================");
+                                        System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                                        System.out.println("\n=================================================");
                 }
                 }
                         
