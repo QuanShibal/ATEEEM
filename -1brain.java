@@ -122,12 +122,18 @@ public class Languages {
                     break;
                 case 2:
                     clearScreen();
-                    System.out.println("How much are you willing to withdraw?");
+                    System.out.println("=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                    System.out.println("|" +"\t"+"How much are you willing to withdraw?"+"\t"+"|");
                     int valueWithdraw = sc.nextInt();
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Successfully withdrawn");
-                    
+                    System.out.println("Your current balance is: " + balance);
+                    System.out.println("Would you like a receipt? [Y/N]");
+                    String receipt = sc.next();
+                    switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
@@ -137,8 +143,8 @@ public class Languages {
             System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-           
+            System.out.println("=================================================");        
+                    }break;
                     }
                     
                     else {
@@ -153,7 +159,11 @@ public class Languages {
                     if (depositAmount >= 1) {
                         balance += depositAmount;
                         System.out.println("Deposit saved");
-                        System.out.println("Your current balance is: ₱" + balance+"\n");
+                        System.out.println("Your current balance is: " + balance);
+                    System.out.println("Would you like a receipt? [Y/N]");
+                    String receipt = sc.next();
+                    switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
@@ -163,13 +173,9 @@ public class Languages {
             System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-                    } else {
-                        System.out.println("Unable to process deposit");
+            System.out.println("=================================================");        
+                    }break;
                     }
-                    
-                    break;
-
                 case 4:
                     // Change Pin Operation Here:
                     System.out.println("\n=================================================");
@@ -247,6 +253,7 @@ public class Languages {
 
         }catch (Exception e){
                    System.out.println("Invalid Input");
+                   return;
                     }
             }
             } else if (languageChoice.equals("Tagalog")) {
@@ -287,18 +294,21 @@ public class Languages {
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Matagumpay na naka-pag withdraw");
-                    
+                    System.out.println("gusto mo bang makita ang resibo? [Y/N]");
+                    String receipt = sc.next();
+                    switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+""+"PETSA at ORAS: "+ dtf.format(now)+"\t"+"|");
+            System.out.println("|" +"\t"+"PETSA at ORAS: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: WITHDRAW"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"WITHDRAWN AMOUNT: aksyon:₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"na-withdraw na halaga: ₱"+ valueWithdraw +"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-           
+            System.out.println("=================================================");        
+                    }break;
                     }
                     
                     else {
@@ -314,18 +324,21 @@ public class Languages {
                         balance += depositAmount;
                         System.out.println("Nai-save ang deposito");
                         System.out.println("Ang inyong Balanse ay: ₱" + balance+"\n");
+                        System.out.println("gusto mo bang makita ang resibo? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"PETSA at ORAS: "+ dtf.format(now)+"\t"+"|");
-            System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: DEPOSIT"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"DEPOSITED AMOUNT: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"PETSA AT ORAS: "+ dtf.format(now)+"\t"+"|");
+            System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: DEPOSITO"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"NADEPOSIT NA HALAGA: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"HALAGA NG BALANSE: ₱"+ balance +"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-                    } else {
-                        System.out.println("Hidni ma-process ang Deposito");
+            System.out.println("=================================================");        
+                    }break;
                     }
                     
                     break;
@@ -445,7 +458,10 @@ public class Languages {
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Berhasil ditarik");
-                    
+                        System.out.println("maukah kamu melihat resinya? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"AKUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
@@ -455,8 +471,8 @@ public class Languages {
             System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-           
+            System.out.println("=================================================");       
+                    }break;
                     }
                     
                     else {
@@ -472,18 +488,21 @@ public class Languages {
                         balance += depositAmount;
                         System.out.println("Setoran disimpan");
                         System.out.println("Your current balance is: ₱" + balance+"\n");
+                        System.out.println("maukah kamu melihat resinya? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"AKUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"AKUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TANGGAL DAN WAKTU: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODUS TRANSAKSI: MENYETORKAN"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH YANG DISETORKAN: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH YANG DISETORKAN: ₱"+ depositAmount +"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-                    } else {
-                        System.out.println("Tidak dapat memproses setoran");
+            System.out.println("=================================================");       
+                    }break;
                     }
                     
                     break;
@@ -603,18 +622,21 @@ public class Languages {
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Seijō ni tekkai sa remashita");
-                    
+                        System.out.println("Ryōshū-sho o mitaidesu ka? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"AKAUNTO NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hidzuke jikoku: "+ dtf.format(now)+"\t"+"|");
-            System.out.println("|" +"\t"+"Torihiki mōdo: Shukkin"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Torihiki mōdo: Shukkin"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hikidashi kingaku: ₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-           
+            System.out.println("=================================================");       
+                    }break;
                     }
                     
                     else {
@@ -630,18 +652,21 @@ public class Languages {
                         balance += depositAmount;
                         System.out.println("Depojitto ga hozon sa remashita");
                         System.out.println("Genzai no zandaka wa: ₱" + balance+"\n");
+                        System.out.println("Ryōshū-sho o mitaidesu ka? [Y/N]? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"AKAUNTO NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hidzuke jikoku: "+ dtf.format(now)+"\t"+"|");
-            System.out.println("|" +"\t"+"Torihiki mōdo: Nyūkin"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Torihiki mōdo: Nyūkin"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Nyūkin kingaku: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-                    } else {
-                        System.out.println("Nyūkin o shori dekimasen");
+            System.out.println("=================================================");      
+                    }break;
                     }
                     
                     break;
@@ -762,7 +787,10 @@ public class Languages {
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Berjaya ditarik balik");
-                    
+                        System.out.println("Ingin melihat resit anda? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"AKAUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
@@ -772,8 +800,8 @@ public class Languages {
             System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-           
+            System.out.println("=================================================");       
+                    }break;
                     }
                     
                     else {
@@ -789,6 +817,10 @@ public class Languages {
                         balance += depositAmount;
                         System.out.println("Deposit disimpan");
                         System.out.println("Baki semasa anda ialah: ₱" + balance+"\n");
+                        System.out.println("Ingin melihat resit anda? [Y/N]");
+                        String receipt = sc.next();
+                        switch(receipt){
+                        case "y": 
             System.out.println("=================================================");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"AKAUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
@@ -798,13 +830,10 @@ public class Languages {
             System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
-            System.out.println("=================================================");
-                    } else {
-                        System.out.println("Tidak dapat memproses deposit");
+            System.out.println("=================================================");      
+                    }break;
                     }
                     
-                    break;
-
 
                 case 4:
                     // Change Pin Operation Here:
