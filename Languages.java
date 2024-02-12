@@ -718,8 +718,8 @@ public class Languages {
         System.out.println("|" +"\t"+"1. pertanyaan baki"+"\t"+"\t"+"\t"+"|");
         System.out.println("|" +"\t"+"2. menarik diri"+"\t"+"\t"+"\t"+"\t"+"|");
         System.out.println("|" +"\t"+"3. simpanan"+"\t"+"\t"+"\t"+"\t"+"|");
-        System.out.println("|" +"\t"+"4. Baguhin ang Pin"+"\t"+"\t"+"\t"+"|");
-        System.out.println("|" +"\t"+"5. tukar pin"+"\t"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"4. tukar pin"+"\t"+"\t"+"\t"+"|");
+        System.out.println("|" +"\t"+"5. keluar"+"\t"+"\t"+"\t"+"\t"+"|");
         System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
         System.out.println("\n=================================================");
         int choice = sc.nextInt();
