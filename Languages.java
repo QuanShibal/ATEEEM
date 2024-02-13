@@ -115,7 +115,7 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DATE & TIME: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE OF TRANSACTION: BALANCE INQUIRY"+"\t"+"|");
-            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance + ".00"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");
@@ -129,7 +129,7 @@ public class Languages {
                     if (balance >= valueWithdraw) {
                         balance -= valueWithdraw;
                         System.out.println("Successfully withdrawn");
-                    System.out.println("Your current balance is: " + balance);
+                    System.out.println("Your current balance is: " + balance+ ".00");
                     System.out.println("Would you like a receipt? [Y/N]");
                     String receipt = sc.next();
                     switch(receipt){
@@ -139,8 +139,8 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DATE & TIME: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE OF TRANSACTION: WITHDRAW"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"WITHDRAWN AMOUNT: ₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"WITHDRAWN AMOUNT: ₱"+ valueWithdraw + ".00"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance + ".00"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");        
@@ -154,12 +154,16 @@ public class Languages {
                     break;
                 case 3:
                     clearScreen();
-                    System.out.println("Enter deposit amount:");
+                    System.out.println("\n=================================================");
+                    System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                    System.out.println("|" +"\t"+"Enter deposit amount:"+"\t"+"\t"+"\t"+"|");
                     int depositAmount = sc.nextInt();
                     if (depositAmount >= 1) {
                         balance += depositAmount;
-                        System.out.println("Deposit saved");
-                        System.out.println("Your current balance is: " + balance);
+                        System.out.println("|" +"\t"+"Deposit saved"+"\t"+"\t"+"\t"+"\t"+"|");
+                        System.out.println("|" +"\t"+"Your current balance is: " + balance + ".00"+"\t"+"|");
+                        System.out.println("|" +"\t" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
+                        System.out.println("=================================================");
                     System.out.println("Would you like a receipt? [Y/N]");
                     String receipt = sc.next();
                     switch(receipt){
@@ -169,8 +173,8 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DATE & TIME: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE OF TRANSACTION: DEPOSIT"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"DEPOSITED AMOUNT: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"DEPOSITED AMOUNT: ₱"+ depositAmount + ".00"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"BALANCE AMOUNT: ₱"+ balance + ".00"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");        
@@ -282,7 +286,7 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"PETSA at ORAS: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: BALANCE INQUIRY"+"\t"+"|");
-            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");
@@ -303,8 +307,8 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"PETSA at ORAS: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: WITHDRAW"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"na-withdraw na halaga: ₱"+ valueWithdraw +"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"na-withdraw na halaga: ₱"+ valueWithdraw + ".00"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"HALAGA: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");        
@@ -333,8 +337,8 @@ public class Languages {
             System.out.println("|" +"\t"+"ACCOUNT NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"PETSA AT ORAS: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"PARAAN NG TRANSAKSYON: DEPOSITO"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"NADEPOSIT NA HALAGA: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"HALAGA NG BALANSE: ₱"+ balance +"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"NADEPOSIT NA HALAGA: ₱"+ depositAmount + ".00"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"HALAGA NG BALANSE: ₱"+ balance + ".00"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");        
@@ -446,7 +450,7 @@ public class Languages {
             System.out.println("|" +"\t"+"AKUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TANGGAL DAN WAKTU: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODUS TRANSAKSI: INFORMASI SALDO"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");
@@ -467,8 +471,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TANGGAL DAN WAKTU: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODUS TRANSAKSI: MENARIK"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH YANG DItarik: ₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH YANG DItarik: ₱"+ valueWithdraw + ".00"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");       
@@ -487,7 +491,7 @@ public class Languages {
                     if (depositAmount >= 1) {
                         balance += depositAmount;
                         System.out.println("Setoran disimpan");
-                        System.out.println("Your current balance is: ₱" + balance+"\n");
+                        System.out.println("Your current balance is: ₱" + balance+ ".00"+"\n");
                         System.out.println("maukah kamu melihat resinya? [Y/N]");
                         String receipt = sc.next();
                         switch(receipt){
@@ -497,8 +501,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TANGGAL DAN WAKTU: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODUS TRANSAKSI: MENYETORKAN"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH YANG DISETORKAN: ₱"+ depositAmount +"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH YANG DISETORKAN: ₱"+ depositAmount + ".00"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH SALDO: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");       
@@ -610,7 +614,7 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUNTO NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hidzuke jikoku: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"Torihiki mōdo: Zandaka shōkai"+"\t"+"|");
-            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");
@@ -631,8 +635,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUNTO NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hidzuke jikoku: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"Torihiki mōdo: Shukkin"+"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Hikidashi kingaku: ₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Hikidashi kingaku: ₱"+ valueWithdraw + ".00"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");       
@@ -651,7 +655,7 @@ public class Languages {
                     if (depositAmount >= 1) {
                         balance += depositAmount;
                         System.out.println("Depojitto ga hozon sa remashita");
-                        System.out.println("Genzai no zandaka wa: ₱" + balance+"\n");
+                        System.out.println("Genzai no zandaka wa: ₱" + balance+ ".00"+"\n");
                         System.out.println("Ryōshū-sho o mitaidesu ka? [Y/N]? [Y/N]");
                         String receipt = sc.next();
                         switch(receipt){
@@ -661,8 +665,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUNTO NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"Hidzuke jikoku: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"Torihiki mōdo: Nyūkin"+"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Nyūkin kingaku: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance +"\t"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Nyūkin kingaku: ₱"+ depositAmount + ".00"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"Zandaka: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");      
@@ -775,7 +779,7 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TARIKH DAN MASA: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE URUS NIAGA: PERTANYAAN BAKI"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");
@@ -796,8 +800,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TARIKH DAB MASA: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE URUS NIAGA: MENARIK DIRI"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH DIKELUARKAN: ₱"+ valueWithdraw +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH DIKELUARKAN: ₱"+ valueWithdraw + ".00"+"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance + ".00"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");       
@@ -816,7 +820,7 @@ public class Languages {
                     if (depositAmount >= 1) {
                         balance += depositAmount;
                         System.out.println("Deposit disimpan");
-                        System.out.println("Baki semasa anda ialah: ₱" + balance+"\n");
+                        System.out.println("Baki semasa anda ialah: ₱" + balance+ ".00"+"\n");
                         System.out.println("Ingin melihat resit anda? [Y/N]");
                         String receipt = sc.next();
                         switch(receipt){
@@ -826,8 +830,8 @@ public class Languages {
             System.out.println("|" +"\t"+"AKAUN NO: XXXXXXXXXXX"+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"TARIKH DAB MASA: "+ dtf.format(now)+"\t"+"|");
             System.out.println("|" +"\t"+"MODE URUSNIAGA: DEPOSIT"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH YANG DIDEPOSKAN: ₱"+ depositAmount +"\t"+"\t"+"\t"+"|");
-            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance +"\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH YANG DIDEPOSKAN: ₱"+ depositAmount + ".00" + "\t"+"\t"+"\t"+"|");
+            System.out.println("|" +"\t"+"JUMLAH BAKI: ₱"+ balance + ".00" +"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"DA AMBANKO CORP INC."+"\t"+"\t"+"\t"+"|");
             System.out.println("|" +"\t"+"\t"+"\t"+"\t"+"\t"+"\t"+"|");
             System.out.println("=================================================");      
